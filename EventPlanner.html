@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1>IT TECH EVENT PLANNER</h1></center>
+
+    
+</head>
+<body>   
+    <img src="Downloads/" alt="">
+    <h2>START DATE</h3><input type="date"> 
+    <h2>END DATE</h3><input type="date">
+
+
+    <H4><button class="button"> Enter</button></H4>
+    
+<P>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</P>
+
+    <center><h2>Algorythm+| Become a Machine Learning Maestro</h2>
+        <h3>4 JULY 2024,THURSDAY</h3>
+        <a href="https://www.eventbrite.com/e/algorythm-become-a-machine-learning-maestro-tickets-740469583457?aff=ebdssbdestsearch"><img src="Downloads/algorythm.jfif" alt=""></a>
+    </center>
+
+<P>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</P>
+<CENter><h2>Future HR Tech Summit & Awards 2024</h2>
+    <h3>29 AUGUST 2024,THURSDAY</h3>
+    <a href="https://www.eventbrite.com/e/future-hr-tech-summit-awards-2024-tickets-904519430967?aff=ebdssbdestsearch&keep_tld=1"> <img src="Downloads/futurehr.jfif" alt="100"></a></CENter>
+
+
+    <P>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</P>
+
+
+
+<center><h2>Outlook Automation Made Easy</h2></center>
+<center>   <h3>01 AUGUST 2024,THURSDAY</h3>
+<a href="https://www.eventbrite.com/e/outlook-automation-made-easy-registration-871919443527?aff=ebdssbdestsearch&_gl=1*opvs0a*_up*MQ..*_ga*MjA0NjM5NjE4NS4xNzIwMDA1MzA3*_ga_TQVES5V6SH*MTcyMDAwNTMwNi4xLjAuMTcyMDAwNTMwNi4wLjAuMA.."><img src="Downloads/outlooktask.jfif" alt="200"></a></center>
+
+
+
+<P>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</P>
+
+
+<CEnter><h2>Global STEM Education Expo 2024 - Bengaluru</h2>
+    <h3>19 OCTOBER 2024,SATURDAY</h3>
+    <a href="https://www.eventbrite.com/e/global-stem-education-expo-2024-bengaluru-tickets-864387665777?aff=ebdssbdestsearch&_gl=1*uk8he3*_up*MQ..*_ga*ODI3NzE5MDguMTcyMDAwNTgzNw..*_ga_TQVES5V6SH*MTcyMDAwNTgzNi4xLjAuMTcyMDAwNTgzNi4wLjAuMA.."><img src="Downloads/globalstem.jfif" alt=""></a></CEnter>
+   
+<P>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</P>
+<center><h2>Global Engineering Education Expo 2024 - Bengaluru</h2>
+    <h3>31 AUGUST 2024,SATURDAY</h3>
+    <a href="https://www.eventbrite.com/e/global-engineering-education-expo-2024-bengaluru-tickets-864392038857?aff=ebdssbdestsearch"><img src="Downloads/globalengine.jfif" alt=""></a>
+    </center>
+
+<P>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</P>
+
+<input type="date" id="date_input">
+<input type="date" id="date_input2">
+<table id="tableData">
+  <!-- Add your table rows here -->
+</table>
+
+<script>
+function searchbyDate() {
+  const startDate = new Date(document.getElementById("date_input").value);
+  const endDate = new Date(document.getElementById("date_input2").value);
+
+  const table = document.getElementById("tableData");
+  const rows = table.getElementsByTagName("tr");
+
+  for (let i = 1; i < rows.length; i++) {
+    const objCells = rows[i].cells;
+    const t1 = new Date(objCells.item(3).innerHTML);
+    const t2 = new Date(objCells.item(4).innerHTML);
+
+    if (t1 >= startDate && t2 <= endDate) {
+      rows[i].style.display = "";
+    } else {
+      rows[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
